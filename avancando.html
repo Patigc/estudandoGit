@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Estudando Git</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=1040" />		
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+	</head>
+	<body>
+		<!--header-->
+		<header> 
+			<h1><a href="index.html">Estudando Git</a></h1>					
+		</header>
+		<!--Content-->
+		<div class="content">
+			<div class="container_12">
+				<div class="grid_12">
+					<h2>Avançando o contato com Git</h2>
+					<h3><span>Avançando</span></h3>
+					<p class="col1">2º Cenário:</p>
+					<p> Git em rede local.
+						É utilizado uma máquina da rede local como se ela fosse um servidor de todos os repositórios,  de todos os projetos que a equipe está trabalhando.<br/>
+						Como buscar as informações no servidor e como mandar as informações para o servidor no momento que o trabalho for concluído.<br/>
+						Trabalhando com uma máquina rodando windows 7, com acesso somente via rede local, a maneira mais simples possível.
+					</p>
+					
+					<hr/>					
+					<p class="col1"> Estutura e primeiros passos.</p>
+					<p>
+						Para começar , abre-se uma máquina virtual com o windows 7 rodando.<br/>
+						Está máquina vai servir como o servidor central de repositórios do Git.<br/>
+						Dentro do disco local, vou criar uma nova pasta chamada de Projetos.<br/>
+						Está pasta vou dar acesso via rede, para que outra máquina possa acessar pela rede local.<br/>
+						Compartilhar pasta de Projetos na rede local.<br/>
+						Botão direito, compartilhar com, pessoas especificas, escolho todos , adicionar.<br/>
+						Troco o nivel de permissão para leitura/edição.<br/>
+						O compartilhamento varia de cada sistema operacional.					
+					</p>
+					<p> 
+						Acesso dado a pasta Projetos, agora dentro da pasta Projetos cria se a pasta do projeto que será desenvolvido, pasta Cliente1.<br/>
+						Caso ainda não tenha, terá que instalar o Git no Servidor que é a máquina se centralizará todos os repositórios.					
+					</p>
+					<hr/>					
+					<p class="col1"> Incializando o Git no servidor.</p>
+					<p>
+						Git instalado no servidor, agora é preciso inicializar o git na pasta Cliente1.<br/>
+						Acessei o Git, e entrei na pasta Cliente1.<br/>
+						Agora tenho que criar meu repositório do Cliente1, só que não posso dar uma <span class="col2"> "git init</span> dentro desta pasta pois estaria criando um repositório padrão e não conseguiria trabalhar com ele em outras estações de trabalho.<br/>
+						Não vou conseguir enviar informações da minha estação de desenvolvimento para o servidor.<br/>
+						Por isto quando se quer criar um repositório para um servidor, que será disponibilizado para outras máquinas na sua rede local.						
+					</p>					
+					<p>
+						Para criar um repositório no servidor utiliza-se o comando <span class="col2">" git init --bare "</span>.<br/>
+						Vai dar o aviso "Initialized empty Git rpository in caminho/Cliente1" dizendo que foi inicializado o repositório.<br/>
+						E na frente do caminho que está vai aparecer ( BARE:Master).<br/>
+						Pronto, repositório inicializado no servidor.					
+					</p>
+					<p> 
+						Agora volto na minha estação de trabalho, no Git local.<br/>
+						Cada estação de trabalho que vai trabalhar no Cliente1 precisa na primeira vez que tiver acesso a este repositório fazer um clone do projeto.<br/>
+						O ideal é que a primeira pessoa que for adicionar a estrutura básica do projeto, faça o clone antes ,envie de volta para o servidor para que as outras comecem a trabalhar.
+					</p>
+					<hr/>					
+					<p class="col1"> Clonando um projeto no servidor.</p>
+					<p> 
+						Vou clonar o repositorio, criar a base do desenvolvimento do projeto e depois vou enviar de volta para o servidor para que os outros intergrantes possa trabalhar. <br/>
+						Para criar um clone utiliza-se o comando <span class="col2">" git clone file:////nomeServidor/projetos/Cliente1 "</span>.<br/>
+						E ele irá criar dentro pasta que você está, no meu caso no momento me encontro na pasta "Pati@PATI-PC /c/wamp/www/EstudandoGit" .					
+					</p>
+					<hr/>					
+					<p class="col1"> Clonando e criando  pasta ao mesmo tempo.</p>
+					<p> 
+						Para criar um clone e uma nova pasta ao mesmo tempo utiliza-se o comando <span class="col2">" git clone file:////nomeServidor/projetos/Cliente1 nomePasta"</span>.<br/>
+						E ele irá criar dentro pasta que você está, uma nova pasta com o nome que você deu na criação e clonando nela o projeto que estipolou.<br/>
+						Vai retornar dizendo que o projeto foi clonado.						
+					</p>
+					<p> 
+						Incluio todos os arquivos necessários na pasta Cliente1 do Git local.<br/>
+						Agora quero enviar para o servidor.<br/>
+						Terminou a etapa de desnvolvimento do projeto local e quer enviar estes dados para o servidor para ser compartilhado com o restante da equipe.<br/>
+					</p>
+					<hr/>					
+					<p class="col1"> Descobrindo o nome do servidor remoto.</p>
+					<p>					
+						Para dar um push nos arquivos você precisa saber qual é o nome do teu servidor remoto.<br/>
+						Para saber o nome do servidor remoto utiliza-se o comando <span class="col2"> " git remote " </span>.<br/>
+						Ele retorna na linha de baixo o nome do servidor remoto.<br/>
+						Por padrão quando se faz um clone ele se chama "origin" .<br/>
+					</p>
+					<hr/>					
+					<p class="col1"> Enviando arquivo servidor remoto.</p>
+					<p> 
+						Observe, estou utilizando o servidor remoto "origin" e estou no branch "master".<br/>
+						Para enviar arquivo para servidor utiliza-se o comando <span class="col2">" git push origin master "</span>.<br/>
+						Com isto estou dizendo "Git envie os arquivos para o servidor origin, arquivos estes que estão agora no branch master".
+					</p>
+					<p>					
+						Caso você entre direto na pasta do servidor, você verá muitas pastas e arquivos, menos os que enviou. <br/>
+						É dificil vizualiar os arquivos diretamente no servidor pois o Git meio que esconde.<br/>
+						Para testar se realmente foi enviado, clone novamente para uma nova pasta com o nome diferente.<br/>
+						Utilize novamente o comando <span class="col2">" git clone file:////nomeServidor/projetos/Cliente1 nomePasta"</span> , com isto verifique os arquivos que enviou.
+					</p>
+					<hr/>					
+					<p class="col1"> Uma situação:</p>
+					<p> 
+						Desenvolvedor A trabalhando na pasta Teste1 com os arquivos do Clente1.<br/>
+						Desenvolvedor B trabalhando na pasta Teste2 com os mesmos arquivos.
+					</p>
+					<p>	
+						Dentro da pasta Teste1 foi feito uma alteração pelo desenvolvedor A e enviado para o servidor no projeto Cliente1.<br/>				
+						Esta alteração tem que ser vista na hora  pelo desenvolvedor B.<br/>
+						Então o desenvolvedor A avisa o desenvolvedor B que há uma nova alteração no servidor e pra ele baixar na máquina dele.
+					</p>
+					<p>	
+						Como o desenvolvedor trará as alterações para sua máquina? <br/>
+						Só que clone ele não pode fazer pois ele já está trabalhando localmente no projeto.
+					</p>
+					<hr/>					
+					<p class="col1"> Pegando arquivos do servidor.</p>
+					<p>	
+						Para trazer os dados do servidor utiliza-se o comando  <span class="col2">" git pull origin master "</span>.<br/>
+						Com isto você está dizendo para o Git pegue no servidor "origin os arquivos e traga para o master".
+					</p>
+					<p>	O git pull tem um pequeno porém, ele faz a busca lá no servidor e automaticamente faz um merge dos arquivos que estão no servidor com o seu diretório atual.
+					</p>
+					<hr/>					
+					<p class="col1"> Pegando os arquivos no servidor e trazendo para um branch diferente.</p>
+					<p>	As vezes isto não é interessante, então quando não quiser que ele faça o merge automaticamente, você precisa ter um brach separado para fazer um fetch.</p>
+					<p>Para não fazer um merge automático utiliza-se o comando <span class="col2"> "git fetch origin nomeBranch "</span>.</p>
+					<hr/>					
+					<p class="col1"> Algumas perguntas que ficou. Tenho que pesquisar</p>
+					<p> Como posso alterar o nome do servidor de origin para o que eu quiser. </p>
+				</div>			    
+			</div>
+		</div>
+		<!--footer-->
+		<footer>    
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="socials">
+						<a href="#"></a>
+						<a href="#"></a>
+						<a href="#"></a>
+						<a href="#"></a>
+					</div>
+					<div class="copy">
+						 2015 | Desenvolvido <a href="#" rel="nofollow">Patricia Graziano.</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
