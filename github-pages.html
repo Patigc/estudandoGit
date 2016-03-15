@@ -29,6 +29,64 @@
 					<p> No momento de enviar os arquivos de volta para o GitHub, é no momento do clone que ele me diz o caminho do branch gh-pages na hora de fazer push?<p>
 					<p> Como faço para enviar arquivos sem ter feito o clone para a ramificação gh-pages?</p>
 					
+					<hr/>
+					<p class="col1">O objetivo é subir o projeto no gitHub.</p>
+					<p>Tenho um projeto na servidor local. Não vou feito nada no git local ainda.</p>
+
+					<p>- Na máquina local.</p>
+					<p>
+						Primeiro terei que criar um repositório no git que se encontra na  máquina local.<br/>
+						Segundo terá que adicionar os arquivos do projeto que já estão pronto no git local. Ou seja adicionar os arquivos na Staging Area, tirando da area de trabalho (Working Directory) e passando para sala de espera. <br/>
+						Terceiro mandar/comitar/salvar os arquivos para o repositório final do git. Fazer isto atráves do comite.
+					</p>
+
+					<p>- No GitHub</p>
+					<p>Primeiro cria-se um repositório em "New repository"</p>
+
+					<p>- Agora ligar o projeto do servidor local com o github</p>
+
+					<p>
+						Adicionar no git local o caminho para o github. Através do comando <span class="col2">"git remote add origin endereçoDoServidor"</span>.</br>
+						Este endereço é o <span class="col2">SSH</span> que aparece dentro do repositório que foi criado no github.
+					</p>
+
+					<p>Pode se verificar se tem um servidor remoto atrás do comando <span class="col2">"git remote"</span>. Ele retornará na linha a baixo "origin" que é o apelido dado ao servidor principal.</p>
+					<p>Agora vamos enviar os arquivos do projeto para o github, brach master.</p>
+					<p>Estando no git local, no branch master , dou o comando <span class="col2">"git push origin master"</span>, digo a ele git envi o aquivo para o servidor na ramificação master.</p>
+
+					<p>Retornou um erro </br>
+					[rejected ] master ->master (fetch first)</br>
+					error: failed to push some refs to 'endereçoServidorGithub'</p>
+					<p>Falhou... mundando a etratégia.</p>
+
+					<p>
+						Trazer para a git local atráves do comando <span class="col2">"git pull origin master"</span> os arquivos que são padrão ao criar o repositório no gitHub. Lembrando não há nada lá, além do read-me.</br>
+						Ele retornou com sucesso os 3 arquivos que tinham  sido criados no github.
+					</p>
+
+					<p>
+						Agora enviar os arquivos para o github novamente com o comando<span class="col2"> "git push origin master"</span></br>
+						Retornou com sucesso todos os enviados .
+					</p>
+					<hr/>
+					<p class="col1">Agora o objetivo é criar uma ramificação gh-pages para que possa ver o site.</p>
+					<p>
+						Cria-se uma branch gh-pages no github. E o mesmo branch no git local.</br>
+						Lembrando que se estiver no git local, no branch master e der o <span class="col2">"git push origin gh-pages"</span>, retornará um erro. Pois  ele não permite que envie do branch local para outro branch com um nome diferente no servidor.
+					</p>
+
+					<p>Mudando a estratégia</p>
+
+					<p>
+						Criando branch no git local com o nome gh-pages, utilizo o comando<span class="col2"> "git branch gh-pages"</span>.</br>
+						Lembrando qu quando eu crio um branch, ele já vem com todos os arquivos do projeto que estão no branch master.</br>
+						Estando no git local no branch gh-pages dou o comando <span class="col2">"git push origin gh-pages"</span>. Retorna sucesso, que os arquivos foram enviados para o branch gh-pages no github.
+					</p>
+
+
+
+
+
 					
 				</div>			    
 			</div>
@@ -37,14 +95,8 @@
 		<footer>    
 			<div class="container_12">
 				<div class="grid_12">
-					<div class="socials">
-						<a href="#"></a>
-						<a href="#"></a>
-						<a href="#"></a>
-						<a href="#"></a>
-					</div>
 					<div class="copy">
-						 2015 | Desenvolvido <a href="#" rel="nofollow">Patricia Graziano.</a>
+						 2015 | Desenvolvido <a href="#" rel="nofollow">Patricia Graziano.</a> <a href="https://br.linkedin.com/in/patricia-graziano-costa-b535a426"target="_blank" alt="Perfil no Linkedin">Perfil no Linkedin.</a>
 					</div>
 				</div>
 			</div>

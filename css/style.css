@@ -244,37 +244,6 @@ footer a:hover {
 	padding-bottom: 23px;
 
 }
-.socials {
-	overflow: hidden;
-	float: right;
-}
-.socials a {
-	float: left;
-	display: block;
-	background: url(../images/socials.png) 0 0 no-repeat;
-	width: 35px;
-	height: 35px;
-}
-.socials a+a {
-	margin-left: 7px;
-	background-position: -42px 0;
-}
-
-.socials a+a+a {
-	background-position: -84px 0;
-}
-
-.socials a+a+a+a {
-	background-position: right 0;
-}
-
-.socials a:hover {
-	opacity: 0.5;
-}
-
-
-
-
 
 /* `Container
 ----------------------------------------------------------------------------------------------------*/
