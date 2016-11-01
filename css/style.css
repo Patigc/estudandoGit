@@ -19,7 +19,7 @@ header, footer{
 	
 }
 body {
-	font: 14px/20px  Arial, Helvetica, sans-serif;
+	font: 16px/22px  Arial, Helvetica, sans-serif;
 	color:#a1a1a1;
 	position:relative;
 	min-width:960px;
@@ -176,9 +176,6 @@ header {
 	text-align:center;
 }
 
-
-
-
 /*Content*/
 
 .col1 {
@@ -274,10 +271,6 @@ footer a:hover {
   margin-left: 10px;
   margin-right: 10px;
 }
-
-
-
-
 
 .container_12 .grid_4 {
   width: 300px;

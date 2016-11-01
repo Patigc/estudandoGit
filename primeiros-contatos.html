@@ -22,10 +22,10 @@
 					<p>
 						Onde um único desenvolvedor trabalha localmente, na sua máquina, desenvolvendo e gerenciando os projetos, sem a participação de outros desenvolvedores.<br/>
 						Utilizando WampServer como servidor local.<br/>
-						Editor de código: NotePad ++ ou Sublime Text 2, geralmente utilizo um ou o outro.
+						Editor de código: NotePad ++ ou Sublime Text 2.
 					</p>
-					<p class="col2">Estrutura de diretorios:</p>
-					<p>Pasta principal : EstudandoGit</p>
+					<p class="col2">Estrutura de diretórios:</p>
+					<p>Pasta principal: EstudandoGit</p>
 					
 					<hr/>
 					<img src="images/telasGit/tela-1.png" alt="" class="img_media f-right">
@@ -37,7 +37,7 @@
 					<p><span class="col1">&clubs;</span> Localização: "/c/wamp/www "</p>
 					<ul class="lista">
 						<li>Por padrão sempre trará o perfil de usuário do Windows se utilizar o Windows ou sua pasta de usuário em outros sistemas operacionais.</li>
-						<li>Para alterar o caminho e deixar direto na pasta que utiliza sempre vai no icone do Git Bash, clique com o botão direito, propriedades e  altere o campo "Inicar em:"  para o caminho da pasta que deseje utilizar.</li>
+						<li>Para alterar o caminho e deixar direto na pasta que utiliza sempre vai no icone do Git Bash, clique com o botão direito, propriedades e  altere o campo "Inicar em:"  para o caminho da pasta que deseje utilizar.(Não consegui fazer isto na versão Git-2.10.1-64-bit)</li>
 					</ul>
 					<hr/>
 					<p class="col1">Não tenho a pasta do projeto criado no Git</p>
@@ -47,7 +47,7 @@
 						Não é necessário entrar pasta por pasta, inclua o caminho todo da pasta que deseja,  <span class="col2">"cd nomePasta/pasta/pasta"</span>.
 					</p>
 					<p>Para sair de uma pasta utiliza-se o comando <span class="col2">"cd .. "</span> e ele vai sair un nivel da pasta.</p>
-					<p>Para limpar os comandos que foram digitados, liberando espaço de vizualização, utiliza-se o comando <span class="col2"> "clear"</span></p>
+					<p>Para limpar os comandos que foram digitados, liberando espaço de visualização, utiliza-se o comando <span class="col2"> "clear"</span></p>
 					<p>
 						Para criar um repositorio do projeto que deseja ser versionado, entrar na pasta e utiliza-se o comando <span class="col2">" git init" .</span><br/>
 						Git vai dizer "Initialized empty Git repository in  C:/wamp/www/EstudandoGit/.git", foi inicializado um respositório na localização tal.<br/>
@@ -82,7 +82,7 @@
 					</p>
 					<p>
 						Quando utiliza o git add, está fazendo o arquivo sair do Working Directory, passando o arquivo para a Staging Area, a sala de espera antes mandar/comitar/salvar as alterações foram feitas.<br/>
-						Depois que utilizou o git add é preciso confirmar as mudanças do projeto. Próximo passo é tirar da Staging Area, do intermediario e passar para repositorio confirmando as mudanças
+						Depois que utilizou o git add é preciso confirmar as mudanças do projeto. Próximo passo é tirar da Staging Area, do intermediario e passar para repositório confirmando as mudanças.
 					</p>				
 					<img src="images/telasGit/commit.png" alt="" class="img_media f-right">					
 					<p>
@@ -95,7 +95,7 @@
 						Vai retornar " nothing to commit, working directory clean", dizendo que seu diretorio de trabalho está vazio.<br/>
 					</p>
 					<hr/>
-					<p class="col1">Tem um arquivo que não quero que o Git versione ignorando </p>
+					<p class="col1">Tem um arquivo que não quero que o Git versione, ignorando </p>
 					<p>
 						Para o Git ignorar um arquivo, crie um arquivo com o nome <span class="col2"> .gitignore </span><br/>
 						Em cada linha escreva o nome do arquivo que deixa ser ignorado.
@@ -121,9 +121,9 @@
 					<p class="col1">Para saber alterações que foram feita e que está na sua Staging Area esperando para ser comitado</p>
 					
 					<hr/>
-					<p class="col1">Quero vizualizar todos os comites que foi feito.</p>					
+					<p class="col1">Quero visualizar todos os comites que foi feito.</p>					
 					<p>
-						Para vizualizar os comites que foram feitos no seu projeto, desde o inicio, utiliza-se o comando <span class="col2"> " git log "</span><br/>
+						Para visualizar os comites que foram feitos no seu projeto, desde o inicio, utiliza-se o comando <span class="col2"> " git log "</span><br/>
 						Mostrará um historico de todos os comites que foi feito.<br/>
 						Pode ver que tem uma linha que diz commit e uma chave, está chave serve para referenciar este comite, sendo assim cada comite terá uma diferente. <br/>
 						Utiliza-se está chave no momento que deseja voltar a versão a atual para a versão do comite.<br/>
@@ -131,7 +131,7 @@
 						Mostrando o autor, o e-mail e a data que foi feita o comite. 					
 					</p>
 					<p>
-						Caso queria vizualizar o que foi feito em cada comite mais detalhado, utiliza-se o comando <span class="col2">" git log -p " </span><br/>
+						Caso queria visualizar o que foi feito em cada comite mais detalhado, utiliza-se o comando <span class="col2">" git log -p " </span><br/>
 						Vai mostrar em ordem descrecente, do atual para o mais antigo, trará também o diff mostrando o que foi feito em cada alteração e arquivo. Mostrando assim uma junção de git log com  git diff.<br/>
 						Mostrara em paginação , <span class="col2"> pressione enter </span> para ir acompanhando linha por linha.</br>
 						No final aparecerá  END dizendo que terminou  a tela o relatório, para voltar para o terminal <span class="col2"> pressione a letra Q </span>. 
@@ -145,13 +145,13 @@
 					
 					</p>
 					<hr/>
-					<p class="col1">Quero vizualizar somente o código e a mensagem de cada comite</p>
+					<p class="col1">Quero visualizar somente o código e a mensagem de cada comite</p>
 					<p>Para ver apenas o código com a mensagem de cada comite utiliza-se o comando com paramentros <span class="col2"> "git log --pretty=oneline" </span></p>
 					
 					<hr/>
-					<p class="col1">Quero vizualizar de uma forma bem detalhada porém simples todas as alterações que foram feitas</p>
+					<p class="col1">Quero visualizar de uma forma bem detalhada porém simples todas as alterações que foram feitas</p>
 					<p>
-						Utiliza-se a interface grafica que o proprio Git disponibiliza para vizualiar este relatórios, através do comando <span class="col2">" gitk "</span>.<br/>
+						Utiliza-se a interface gráfica que o próprio Git disponibiliza para visualizar este relatórios, através do comando <span class="col2">" gitk "</span>.<br/>
 						Vai abrir a interface grafica trazendo o projeto que está sendo feito o versionamento mostrará:<br/>
 						<span class="col1">&clubs;</span> A cronologia dos comites, feito por quem e revisado por quem.<br/>
 						<span class="col1">&clubs;</span> A chave do comite.<br/>
@@ -189,7 +189,7 @@
 					<p class="col1">Quero criar um ponto de atalho para um determinado ponto do sistema que está sendo desenvolvido.</p>		
 					<p> 
 						Geralmente os desenvolvedores utiliza as tags para criar marcações nas versões diferentes de um sistema.<br/>
-						Utilizando uma tag terá um atalho, uma forma facilitada de trocar, reverter o status do sistema para uma determinada tag, ou seja data e hora expecifica, e assim poder vizualizar poder alterar se for o caso, os arquivos daquela versão, ou poder fazer consultas de uma forma rápida no código fonte de como ele era naquela versão.
+						Utilizando uma tag terá um atalho, uma forma facilitada de trocar, reverter o status do sistema para uma determinada tag, ou seja data e hora expecifica, e assim poder visualizar poder alterar se for o caso, os arquivos daquela versão, ou poder fazer consultas de uma forma rápida no código fonte de como ele era naquela versão.
 					</p>
 					<p> Tag é um ponteiro para um ponto expecifico  do sistema.</p>
 					<p>Pra listar as tags que estão no sistemas utliza-se o comando <span class="col2">" git tag " </span>.</p>
@@ -222,8 +222,8 @@
 					<hr/>
 					<p class="col1"> Como fazer para utilizar uma tag</p>
 					<p> 
-						Quero vizualizar os arquivos que existia no meu comite inicial, na versão da primira tag.<br/>
-						Para vizualizar os arquivos referente a um determinada tag, utiliza-se o comando <span class="col2">" git checkout nomeTag " </span> . <br/>
+						Quero visualizar os arquivos que existia no meu comite inicial, na versão da primira tag.<br/>
+						Para visualizar os arquivos referente a um determinada tag, utiliza-se o comando <span class="col2">" git checkout nomeTag " </span> . <br/>
 						Ele vai fazer o checkout daquela tag, fazer a troca dos meus arquivos para os arquivos que estavam naquela versão. <br/>
 						Confira os arquivos, note que não são iguais. <br/>
 						E no terminal vai ser mostrado a versão, a tag que o terminal está, na frente do caminho da pasta, dentro de parenteses.										
@@ -281,7 +281,7 @@
 						No meu terminal, estou no branchTeste.<br/>
 						Consulto o estatus, ele me mostra que tem arquivos para ser comitados, caso queria, faça o comite do que você está fazendo no momento. Isto com a intenção de ter o trabalho salvo pelo Git.<br/>
 						Agora dou um<span class="col2">" git checkout brachMaster "</span> , para sair do branchTeste e pegar os arquivos que estão rodando no cliente. <br/>
-						Trocando de ambiente, do teste que eu estava desenvolvendo para o ambiente master que o cliente vizualiza no momento.
+						Trocando de ambiente, do teste que eu estava desenvolvendo para o ambiente master que o cliente visualiza no momento.
 					</p>	
 					<p>	
 						Faço então as alterações requisitadas pelo cliente. <br/>
@@ -306,7 +306,7 @@
 						Para deletar um branch utiliza-se o comando <span class="col2">" git branch -d nomeBranch "</span>.					
 					</p>
 					<hr/>
-					<p class="col1">Para vizualizar todos os branhes existentes </p>
+					<p class="col1">Para visualizar todos os branhes existentes </p>
 					<p>Para listar todos os branches existentes no repositório utiliza-se o comando <span class="col2">" git branch "</span>.</p>
 					
 					<hr/>
@@ -322,11 +322,11 @@
 						Para intregra as alterações  de um arquivo utliza-se o comando <span class="col2">" git merge  branchTeste "</span>.
 					</p>	
 					<p>							
-						Feito um merge do branchTeste1 para o branchTeste2 que foi o ultimo a ser alterado.<br/>
+						Feito um merge do branchTeste1 para o branchTeste2 que foi o último a ser alterado.<br/>
 						Ele retorna "Conflict (content): merge conflict in nomeArquivo / Automatic merge failed: fix conflicts and then commit the result", um conflito no brabchTeste2, que é onde estou tranzendo o arquivo, a função do branchTeste1. <br/>
 						Dizendo que o merge automatico falhou, tenho que corrigir este conflito e depois comitar o arquivo.<br/>
 						Mostrar também na frente do caminho da pasta, junto com o nome do branch a palavras Merging.<br/>
-						No código fonte, poderá vizualiar :<br/>
+						No código fonte, poderá visualizar :<br/>
 					</p>
 					<p>
 						Lembrando você está no branchTeste2,  por isto no arquivo ele vai mostrar a versão do branchTeste2 com comentário " <<<< HEAD "  mas a função.<br/>
@@ -345,7 +345,7 @@
 			<div class="container_12">
 				<div class="grid_12">
 					<div class="copy">
-						 2015 | Desenvolvido <a href="#" rel="nofollow">Patricia Graziano.</a> <a href="https://br.linkedin.com/in/patricia-graziano-costa-b535a426"target="_blank" alt="Perfil no Linkedin">Perfil no Linkedin.</a>
+						 2016 | Desenvolvido <a href="http://patigc.github.io/patriciaGraziano/">Patricia Graziano.</a> <a href="https://br.linkedin.com/in/patricia-graziano-costa-b535a426"target="_blank" alt="Perfil no Linkedin">Perfil no Linkedin.</a>
 					</div>
 				</div>
 			</div>
